@@ -13,11 +13,11 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id="app">
         <div class="content_Utente">
             <section class="header_Utente">
-                <div class="imgUtente"><img src="./asset/img/avatar_io.jpg" alt=""></div>
-                <div class="nomeUtente">Nome Utente</div>
+                <div class="imgUtente"><img :src="imgUtente" alt=""></div>
+                <div class="nomeUtente">{{nomeUtente}}</div>
                 <div class="iconUtente">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
@@ -38,8 +38,16 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
             </section>
+
             <section class="amici">
                 <!-- parte dinamica  -->
+                <div class="contact" v-for="(contact, index) in contacts" @click="selezionaContatto(index)">
+                    <div class="contatto_img"><img :src="`asset/img/avatar`+ contact.avatar +`.jpg`"></div>
+                    <div class="contatto_nome">{{contact.name}}</div>
+                    <div class="contatto_data">{{contact.messages[0].date}}</div>
+                    <div class="contatto_messaggio">{{contact.messages[0].text}}</div>
+                </div>
+
             </section>
         </div>
 
@@ -48,6 +56,10 @@
             <section class="header_Chat">
                 <!-- chat dinamica -->
                 <div class="chat">
+
+                    <img :src="'asset/img/avatar'+ amicoSelezionato.avatar +'.jpg'">
+                    <!-- {{amicoSelezionato.name}} -->
+
                     <!-- icona -->
                     <!-- ultimo accesso -->
                 </div>
@@ -60,6 +72,7 @@
 
             <section class="Text_Chat">
                 <!-- messaggi dinamici  -->
+                {{amicoSelezionato.messages}}
             </section>
 
             <section class="send_Text">
@@ -78,6 +91,7 @@
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./asset/js/main.js"></script>
 </body>
 

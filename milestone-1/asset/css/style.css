@@ -151,8 +151,52 @@ body
     width: 100%;
     height: 64%;
     overflow-y: scroll;
-    color: rebeccapurple;
-    border: 1px solid black;
+    background-color: #fff;
+}
+.contact
+{
+    width: 100%;
+    height: 100px;
+}
+.contatto_img
+{
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contatto_img img
+{
+    width: 80px;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.contatto_nome, .contatto_data
+{
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 0.5rem;
+}
+.contatto_messaggio
+{
+    width: 80%;
+    height: 60%;
+    float: left;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    color: #B6B9C1;
+}
+
+.contatto_data
+{
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: right;
+    color: #B6B9C1;
 }
 
 .header_Chat
@@ -168,7 +212,14 @@ body
 .chat
 {
     width: 80%;
+    height: 100%;
 }
+.chat img
+{
+    width: 10%;
+    border-radius: 50%;
+}
+
 .iconeChat
 {
     width: 20%;
