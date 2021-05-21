@@ -90,12 +90,12 @@ const app = new Vue({
                 ],
             },
         ],
-        amicoSelezionato: ''
+        amicoSelezionato: 0
     },
     methods: {
         selezionaContatto(index) {
             console.log('seleziona ' + index);
-            this.amicoSelezionato = this.contacts[index]
+            this.amicoSelezionato = index
         }
     }
 
