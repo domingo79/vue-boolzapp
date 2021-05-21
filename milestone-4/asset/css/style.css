@@ -1,0 +1,329 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,
+    #009688 0%, #009688 14%,
+    #DDDBD1 14%, #D2DBDC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.container
+{
+    width: 85%;
+    height: 95%;
+}
+.content_Utente
+{
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+.content_Chat
+{
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+.header_Utente
+{
+    width: 100%;
+    height: 12%;
+    background-color:#EAEAEA;
+    border: 1px solid #D6D6D6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgUtente
+{
+    width: 20%;
+    text-align: center;
+}
+.imgUtente img
+{
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nomeUtente
+{
+    width: 40%;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.iconUtente
+{
+    width: 40%;
+    font-size: 2rem;
+    color: #B1B1B1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.notifiche
+{
+    width: 100%;
+    height: 15%;
+    background: #8EDAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notifiche .iconaNotifiche
+{
+    width: 25%;
+}
+.notifiche .iconaNotifiche i
+{
+    color: #8EDAFC;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+.notifiche .attivaNotifiche
+{
+    width: 75%;
+   
+}
+.notifiche .attivaNotifiche p
+{
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+.notifiche .attivaNotifiche a
+{
+    color: #4F7485;
+    font-size: 1.15rem;
+}
+.cerca
+{
+    width: 100%;
+    height: 10%;
+    padding: 0.25rem 0;
+    background-color: #f5ebeb;
+}
+.cerca_Amici
+{
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cerca_Amici i
+{
+    color: #B6B9BB;
+    font-size: 1.25rem;
+    width: 10%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.cerca_Amici input
+{
+    width: 90%;
+    height: 100%;
+    font-size: 1.1rem;
+    border: none;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.amici
+{
+    width: 100%;
+    height: 64%;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.contact
+{
+    width: 100%;
+    height: 100px;
+}
+.contatto_img
+{
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contatto_img img
+{
+    width: 80px;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.contatto_nome, .contatto_data
+{
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 0.5rem;
+}
+.contatto_messaggio
+{
+    width: 80%;
+    height: 60%;
+    float: left;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    color: #B6B9C1;
+}
+
+.contatto_data
+{
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: right;
+    color: #B6B9C1;
+}
+
+.header_Chat
+{
+    width: 100%;
+    height: 12%;
+    background-color:#EAEAEA;
+    border: 1px solid #D6D6D6;
+    display: flex;
+    align-items: center;
+}
+/* parte dinamica degli amici chat  */
+.chat
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.chat img
+{
+    width: 10%;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.ultimo_accesso
+{
+    display: flex;
+    flex-direction: column;
+}
+.ultimo_accesso p
+{
+    margin: 0.25rem 0;
+    color: #6B7376;
+    font-size: 0.9rem;
+}
+.iconeChat
+{
+    width: 20%;
+    font-size: 2rem;
+    color: #B1B1B1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Text_Chat
+{
+    width: 100%;
+    height: 75vh;
+    overflow-y: scroll;
+    background-image: url('/milestone-1/asset/img/mine.jpg');
+    
+}
+/* classe bind  */
+.sent
+{
+    max-width: 100%;
+    margin: 3.5rem;
+    text-align: left;
+    position: relative;
+}
+.received
+{
+    max-width: 100%;
+    margin: 3.5rem;
+    text-align: right;
+    position: relative;
+}
+.sent span:first-child
+{
+    background-color: #ffffff ;
+    padding:  1.5rem 2rem;
+    border-radius: 8px;
+}
+.received span:first-child
+{
+    background-color: #D5F9BA ;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;  
+}
+.sent span:nth-child(2)
+{
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: -25px;
+    left: 20px;
+}
+.received span:nth-child(2)
+{
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: -25px;
+    right: 15px;
+}
+
+.send_Text
+{
+    width: 100%;
+    height: 10%;
+    background: #F3EEEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.smile, .audio
+{
+    width: 10%;
+}
+.smile i, .audio i
+{
+    color: #6B7376;
+    display: flex;
+    justify-content: center;
+    font-size: 1.50rem;
+}
+.scrivi_Messaggio
+{
+    width: 80%;
+}
+.scrivi_Messaggio input
+{
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+
+}
+
