@@ -140,10 +140,7 @@ const app = new Vue({
         ],
         counter: 0,
         message: '',
-        // oggi: '',
-        // giorno: new Date().getDate(),
-        // mese: new Date().getMonth() + 1,
-        // anno: new Date().getFullYear(),
+        search: ''
     },
     methods: {
         sendMessage() {
@@ -166,6 +163,14 @@ const app = new Vue({
                 };
                 this.contacts[this.counter].messages.push(autoMsg);
             }, 2000)
+        },
+
+    },
+    computed: {
+        filteredList() {
+            return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.search.toLowerCase())
+            })
         }
     }
 

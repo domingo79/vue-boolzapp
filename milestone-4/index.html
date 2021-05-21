@@ -35,13 +35,13 @@
             <section class="cerca">
                 <div class="cerca_Amici">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
             </section>
 
             <section class="amici">
                 <!-- parte dinamica  -->
-                <div class="contact" v-for="(contact, index) in contacts" @click="counter = index">
+                <div class="contact" v-for="(contact, index) in filteredList" @click="counter = index">
                     <div class="contatto_img"><img :src="`./asset/img/avatar`+ contact.avatar +`.jpg`"></div>
                     <div class="contatto_nome">{{contact.name}}</div>
                     <div class="contatto_data">Data:
