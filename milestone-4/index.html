@@ -41,7 +41,8 @@
 
             <section class="amici">
                 <!-- parte dinamica  -->
-                <div class="contact" v-for="(contact, index) in filteredList" @click="counter = index">
+                <div :class="counter === index ? 'active' : '' " class="contact"
+                    v-for="(contact, index) in filteredList" @click="counter = index">
                     <div class="contatto_img"><img :src="`./asset/img/avatar`+ contact.avatar +`.jpg`"></div>
                     <div class="contatto_nome">{{contact.name}}</div>
                     <div class="contatto_data">Data:
@@ -78,7 +79,7 @@
 
             <section class="Text_Chat">
                 <!-- messaggi dinamici  -->
-                <div class="messaggi_ricevuti" v-for="elemento in contacts[counter].messages">
+                <div class="messaggi_status" v-for="elemento in contacts[counter].messages">
                     <div :class="elemento.status">
                         <span>{{elemento.text}}</span>
                         <span>{{elemento.date}}</span>
