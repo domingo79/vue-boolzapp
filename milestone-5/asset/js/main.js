@@ -188,9 +188,6 @@ const app = new Vue({
             }
         }
 
-
-
-
     },
 
     computed: {
